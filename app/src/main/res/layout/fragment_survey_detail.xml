@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sinergiinformatika.sisicrm.SurveyDetailFragment">
+
+    <TextView
+        android:id="@+id/row_title_fragment_survey"
+        style="@style/TextPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/icon_button_radius"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/content_vertical_margin_smaller"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/content_vertical_margin_smaller"
+        android:text="@string/title_fragment_order" />
+
+    <TabHost
+        android:id="@+id/survey_detail_tab_host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/survey_detail_button_holder"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/row_title_fragment_survey"
+        android:background="@color/bg_main">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/content_vertical_margin_smaller">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_card" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/survey_detail_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+    <LinearLayout
+        android:id="@+id/survey_detail_button_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_card"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/Button.Transparent.Gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="cancel"
+            android:text="@string/action_cancel"
+            android:id="@+id/btn_cancel" />
+
+        <Button
+            style="@style/Button.Transparent.Gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="prev"
+            android:text="@string/action_prev"
+            android:id="@+id/btn_prev"
+            android:visibility="gone"/>
+
+        <Button
+            style="@style/Button.Transparent.Red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="next"
+            android:id="@+id/btn_next"
+            android:text="@string/action_next" />
+
+        <Button
+            style="@style/Button.Transparent.Red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="save"
+            android:text="@string/action_save"
+            android:id="@+id/btn_save"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_height">350dp</dimen>
+    <dimen name="map_height">250dp</dimen>
+    <dimen name="store_image_height">250dp</dimen>
+    <dimen name="slide_panel_default_height">300dp</dimen>
+    <dimen name="slide_panel_height">600dp</dimen>
+</resources>

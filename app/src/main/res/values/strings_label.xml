@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_nfc_id" translatable="false">NFC ID</string>
+    <string name="label_currency_IDR" translatable="false">Rp</string>
+    <string name="label_unit_ton" translatable="false">ton</string>
+
+    <string name="label_broken_package">Kantong semen rusak</string>
+    <string name="label_content_hardened">Semen membatu</string>
+    <string name="label_content_nett_less">Semen kurang banyak</string>
+    <string name="label_content_dried">Semen cepat kering</string>
+    <string name="label_content_nett_more">Semen terlalu banyak</string>
+    <string name="label_priority">Prioritas</string>
+    <string name="label_store_name">Nama Toko</string>
+    <string name="label_store_category">Kelas Toko</string>
+    <string name="label_coordinate">Koordinat</string>
+    <string name="label_warehouse_capacity">Kapasitas Gudang Toko</string>
+    <string name="label_province">Provinsi</string>
+    <string name="label_city">Kota</string>
+    <string name="label_district">Kecamatan</string>
+    <string name="label_subdistrict">Kecamatan</string>
+    <string name="label_address">Alamat</string>
+    <string name="label_zip_code">Kode Pos</string>
+    <string name="label_phone_mobile">Nomor HP</string>
+    <string name="label_phone_number">Nomor Telp</string>
+    <string name="label_owner_name">Nama Pemilik</string>
+    <string name="label_birth_date">Tanggal Lahir</string>
+    <string name="label_religion">Agama Pemilik</string>
+    <string name="label_description">Keterangan</string>
+    <string name="label_notes">Catatan</string>
+    <string name="label_btn_gallery"> Galeri</string>
+    <string name="label_btn_camera"> Kamera</string>
+    <string name="label_platinum">Platinum</string>
+    <string name="label_gold">Gold</string>
+    <string name="label_silver">Silver</string>
+    <string name="label_islam">Islam</string>
+    <string name="label_kristen">Kristen</string>
+    <string name="label_katolik">Katolik</string>
+    <string name="label_hindu">Hindu</string>
+    <string name="label_budha">Buddha</string>
+    <string name="label_khonghucu">Khonghucu</string>
+    <string name="label_add_agenda">&#xf03a; Tambah Kunjungan</string>
+    <string name="label_add_order">&#xf0f6; Order</string>
+    <string name="label_add_location">&#xf041; Tambahkan Data Lokasi</string>
+    <string name="label_order">Order</string>
+    <string name="label_detail">Detail</string>
+    <string name="label_order_cement">Pesan Semen</string>
+    <string name="label_unit_sak">Zak</string>
+    <string name="label_distributor_name">Nama Distributor</string>
+    <string name="label_noname">(NoName)</string>
+    <string name="label_loading">Loading…</string>
+    <string name="label_survey">Survey</string>
+    <string name="label_selling_price">Harga Jual</string>
+    <string name="label_stock">Stok</string>
+    <string name="label_volume">Jumlah Penjualan / Bln</string>
+    <string name="label_store_location">Lokasi Toko</string>
+    <string name="label_store_contact">Kontak Toko</string>
+    <string name="label_store_information">Informasi Toko</string>
+    <string name="label_btn_reaload">&#xf0e2; Perbaharui</string>
+    <string name="label_visit_number">Jumlah Kunjungan</string>
+    <string name="label_approved_order">Order yang disetujui</string>
+    <string name="label_logout">Logout</string>
+    <string name="label_user_profile">Profil Pengguna</string>
+    <string name="label_username">Username</string>
+    <string name="label_name">Nama</string>
+    <string name="label_position">Posisi</string>
+    <string name="label_new_store">Baru</string>
+    <string name="label_delivery_date">Tanggal Pengiriman</string>
+    <string name="label_sync_sent">Tersimpan</string>
+    <string name="label_sync_pending">Pending</string>
+    <string name="label_sync_failed">Gagal disimpan</string>
+    <string name="label_store_active">Aktif</string>
+    <string name="label_store_verified">Diverifikasi</string>
+    <string name="label_store_unverified">Belum Diverifikasi</string>
+    <string name="label_buying_price">Harga Beli</string>
+    <string name="label_today">Hari Ini</string>
+    <string name="label_term_of_payment" translatable="false">Term of Payment</string>
+    <string name="label_day">Hari</string>
+    <string name="label_syncing">Menyinkronkan...</string>
+    <string name="label_reupload">Upload Ulang</string>
+    <string name="label_photo">Foto</string>
+    <string name="label_complains">Keluhan</string>
+    <string name="label_push_data">Mengirimkan...</string>
+</resources>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_card"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <LinearLayout
+                android:id="@+id/row_agenda_store_info_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/content_vertical_margin_smaller_even">
+
+                    <LinearLayout
+                        android:id="@+id/row_agenda_icon_holder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/row_agenda_ic_list"
+                            style="@style/TextSecondary.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/content_horizontal_margin_smaller"
+                            android:layout_marginStart="@dimen/content_horizontal_margin_smaller"
+                            android:text="@string/icon_list"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/row_agenda_ic_camera"
+                            style="@style/TextSecondary.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/content_horizontal_margin_smaller"
+                            android:layout_marginStart="@dimen/content_horizontal_margin_smaller"
+                            android:text="@string/icon_camera"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/row_agenda_ic_comment"
+                            style="@style/TextSecondary.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/content_horizontal_margin_smaller"
+                            android:layout_marginStart="@dimen/content_horizontal_margin_smaller"
+                            android:text="@string/icon_comment"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/row_agenda_ic_trolley"
+                            style="@style/TextSecondary.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/content_horizontal_margin_smaller"
+                            android:layout_marginStart="@dimen/content_horizontal_margin_smaller"
+                            android:text="@string/icon_shopping_cart"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/row_agenda_ic_competitor"
+                            style="@style/TextSecondary.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/content_horizontal_margin_smaller"
+                            android:layout_marginStart="@dimen/content_horizontal_margin_smaller"
+                            android:text="@string/icon_user_secret"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/row_agenda_icon_holder"
+                        android:layout_toStartOf="@+id/row_agenda_icon_holder"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even">
+
+                        <TextView
+                            android:id="@+id/row_agenda_store_name"
+                            style="@style/TextPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/hello_world" />
+
+                        <TextView
+                            android:id="@+id/row_agenda_store_cat"
+                            style="@style/TextPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/content_horizontal_margin_smaller"
+                            android:layout_marginStart="@dimen/content_horizontal_margin_smaller"
+                            android:text="@string/icon_bookmark" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/row_agenda_store_address"
+                    style="@style/TextSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                    android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/hello_world" />
+
+                <TextView
+                    android:id="@+id/row_agenda_store_city"
+                    style="@style/TextSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                    android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/hello_world" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                    android:paddingTop="@dimen/content_vertical_margin_smaller_even">
+
+                    <TextView
+                        android:id="@+id/row_agenda_store_owner_name"
+                        style="@style/TextSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/hello_world" />
+
+                    <TextView
+                        style="@style/TextSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_horizontal_margin_smaller"
+                        android:layout_marginRight="@dimen/content_horizontal_margin_smaller"
+                        android:text="@string/hypen" />
+
+                    <TextView
+                        android:id="@+id/row_agenda_store_owner_mobile"
+                        style="@style/TextSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/hello_world" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/row_agenda_time"
+                style="@style/TextSecondary.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/row_agenda_store_info_holder"
+                android:text="@string/hello_world" />
+
+            <TextView
+                android:id="@+id/row_agenda_date"
+                style="@style/TextSecondary.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/row_agenda_store_info_holder"
+                android:text="@string/hello_world"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/row_agenda_action_btn"
+            style="@style/Button.Green.Small"
+            android:layout_width="@dimen/check_button_width"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/content_vertical_margin_smaller"
+            android:layout_marginStart="@dimen/content_vertical_margin_smaller"
+            android:onClick="toggleStoreCheck"
+            android:padding="@dimen/content_horizontal_margin_smaller"
+            android:text="@string/icon_add" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/row_agenda_store_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:src="@color/stroke_card" />
+
+</LinearLayout>

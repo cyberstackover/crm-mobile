@@ -1,0 +1,217 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_main"
+              android:orientation="vertical"
+              tools:context="com.sinergiinformatika.sisicrm.fragments.ProfileFragment">
+
+    <include
+        android:id="@+id/profile_head_info"
+        layout="@layout/row_item_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            style="@style/TextSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical"
+            android:text="@string/icon_user"
+            android:textSize="64sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/profile_label_username"
+                style="@style/TextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/label_username"/>
+
+            <TextView
+                android:id="@+id/profile_field_delimiter"
+                style="@style/TextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_horizontal_margin_smaller_even"
+                android:layout_marginStart="@dimen/content_horizontal_margin_smaller_even"
+                android:layout_toEndOf="@+id/profile_label_username"
+                android:layout_toRightOf="@+id/profile_label_username"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/colon"/>
+
+            <TextView
+                android:id="@+id/profile_username"
+                style="@style/TextPrimary.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_horizontal_margin_smaller_even"
+                android:layout_marginStart="@dimen/content_horizontal_margin_smaller_even"
+                android:layout_toEndOf="@+id/profile_field_delimiter"
+                android:layout_toRightOf="@+id/profile_field_delimiter"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/hello_world"/>
+
+            <TextView
+                android:id="@+id/profile_name"
+                style="@style/TextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/profile_username"
+                android:layout_alignStart="@+id/profile_username"
+                android:layout_below="@+id/profile_username"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/hello_world"/>
+
+            <TextView
+                android:id="@+id/profile_label_name"
+                style="@style/TextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/profile_name"
+                android:layout_below="@+id/profile_label_username"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/label_name"/>
+
+            <TextView
+                style="@style/TextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/profile_name"
+                android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                android:layout_toLeftOf="@+id/profile_name"
+                android:layout_toStartOf="@+id/profile_name"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/colon"/>
+
+            <TextView
+                android:id="@+id/profile_position"
+                style="@style/TextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/profile_name"
+                android:layout_alignStart="@+id/profile_name"
+                android:layout_below="@+id/profile_name"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/hello_world"/>
+
+            <TextView
+                android:id="@+id/profile_label_position"
+                style="@style/TextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/profile_position"
+                android:layout_below="@+id/profile_label_name"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/label_position"/>
+
+            <TextView
+                style="@style/TextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/profile_position"
+                android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                android:layout_toLeftOf="@+id/profile_position"
+                android:layout_toStartOf="@+id/profile_position"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/colon"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/profile_head_logout"
+        layout="@layout/row_item_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <Button
+            android:id="@+id/profile_sync_btn"
+            style="@style/Button.Red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:onClick="triggerSync"
+            android:text="@string/action_sync"/>
+
+        <Button
+            android:id="@+id/profile_push_10data_btn"
+            style="@style/Button.Red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:onClick="triggerPushData"
+            android:text="@string/action_push_data"/>
+
+        <Button
+            android:id="@+id/profile_change_pass_btn"
+            style="@style/Button.Red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:onClick="changePassword"
+            android:text="@string/action_change_pass"/>
+
+        <Button
+            style="@style/Button.Outline.Red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="attemptLogout"
+            android:text="@string/action_logout"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/profile_about"
+        style="@style/TextSecondary.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+        android:text="@string/message_about"/>
+</LinearLayout>

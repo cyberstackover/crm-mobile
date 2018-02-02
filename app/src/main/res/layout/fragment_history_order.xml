@@ -1,0 +1,57 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sinergiinformatika.sisicrm.fragments.HistoryOrderFragment">
+
+    <RelativeLayout
+        android:id="@+id/tab2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/history_order_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ListView
+                android:id="@+id/history_order_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/history_order_blank_text_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/history_order_blank_text"
+                style="@style/TextPrimary.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/content_vertical_margin"
+                android:paddingLeft="@dimen/content_horizontal_margin"
+                android:paddingRight="@dimen/content_horizontal_margin"
+                android:paddingTop="@dimen/content_vertical_margin"
+                android:text="@string/message_blank_history_order" />
+
+            <Button
+                android:id="@+id/btn_order_reload"
+                style="@style/Button.Red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_btn_reaload"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

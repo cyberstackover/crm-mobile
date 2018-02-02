@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tag_add" translatable="false">add</string>
+    <string name="tag_remove" translatable="false">remove</string>
+    <string name="tag_price" translatable="false">price</string>
+    <string name="tag_complaints" translatable="false">complaints</string>
+    <string name="tag_order" translatable="false">order</string>
+    <string name="tag_statistics" translatable="false">survey_statistics</string>
+    <string name="tag_survey_list" translatable="false">survey_list</string>
+    <string name="tag_store_list" translatable="false">store_list</string>
+    <string name="tag_survey_history" translatable="false">survey_history</string>
+    <string name="tag_priority" translatable="false">priority</string>
+    <string name="tag_distance" translatable="false">distance</string>
+    <string name="tag_date" translatable="false">date</string>
+    <string name="tag_image" translatable="false">survey_image</string>
+    <string name="tag_add_agenda" translatable="false">add_agenda</string>
+    <string name="tag_action" translatable="false">action</string>
+    <string name="tag_object_id" translatable="false">object_id</string>
+    <string name="tag_extra_id" translatable="false">extra_id</string>
+    <string name="tag_profile" translatable="false">profile</string>
+    <string name="tag_newstore" translatable="false">newstore</string>
+    <string name="tag_competitor_program" translatable="false">competitor_program</string>
+    <string name="tag_store" translatable="false">store</string>
+    <string name="tag_store_db_id" translatable="false">store</string>
+</resources>

@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sinergiinformatika.sisicrm.fragments.SurveyImageFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <RelativeLayout
+            android:id="@+id/row_label_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/icon_button_radius"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/title_fragment_survey_image" />
+
+            <Button
+                android:id="@+id/survey_image_reset_btn"
+                style="@style/Button.Transparent.Gray.Icon"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/icon_reset" />
+        </RelativeLayout>
+
+        <!--<include layout="@layout/loading"
+              android:layout_alignParentEnd="false"
+              android:layout_centerInParent="true"
+              android:id="@+id/row_loading"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+          </include>-->
+
+        <ViewStub
+            android:id="@+id/row_loading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:layout_centerInParent="true"
+            android:layout="@layout/loading" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/img_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/row_btn_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_card"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/survey_image_gallery_btn"
+                    style="@style/Button.Transparent.Gray"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_btn_gallery" />
+
+                <Button
+                    android:id="@+id/survey_image_camera_btn"
+                    style="@style/Button.Transparent.Gray"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_btn_camera" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_card"
+                android:paddingBottom="@dimen/date_cell_padding"
+                android:paddingTop="@dimen/date_cell_padding">
+
+    <ImageView
+        android:id="@+id/date_selection_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/content_vertical_margin"
+        android:layout_marginLeft="@dimen/content_horizontal_margin"
+        android:layout_marginRight="@dimen/content_horizontal_margin"
+        android:layout_marginTop="@dimen/content_vertical_margin"
+        android:gravity="center"
+        android:text="0"/>
+
+    <ImageView
+        android:id="@+id/date_sign_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

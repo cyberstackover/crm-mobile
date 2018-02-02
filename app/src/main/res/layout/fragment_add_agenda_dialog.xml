@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sinergiinformatika.sisicrm.dialogs.AddAgendaDialog">
+
+    <TextView
+        style="@style/TextPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/content_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/content_vertical_margin"
+        android:text="@string/title_dialog_add_visitation" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/maroon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_vertical_margin_smaller"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_horizontal_margin"
+                android:layout_marginRight="@dimen/content_horizontal_margin"
+                android:text="@string/icon_calendar" />
+
+            <TextView
+                android:id="@+id/add_agenda_date_edit"
+                style="@style/TextPrimary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingLeft="@dimen/content_horizontal_margin"
+                android:paddingRight="@dimen/content_horizontal_margin"
+                android:paddingTop="@dimen/content_vertical_margin_smaller" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="@dimen/content_horizontal_margin"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/content_vertical_margin_smaller_even"
+                android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:src="@drawable/horizontal_line" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_vertical_margin_smaller_even"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            style="@style/TextPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/content_horizontal_margin"
+            android:layout_marginRight="@dimen/content_horizontal_margin"
+            android:text="@string/icon_briefcase" />
+
+        <requestFocus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <AutoCompleteTextView
+            android:id="@+id/add_agenda_store_edit"
+            style="@style/TextPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <requestFocus />
+        </AutoCompleteTextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_vertical_margin_smaller">
+
+        <Button
+            android:id="@+id/add_agenda_cancel_btn"
+            style="@style/Button.Transparent.Gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/action_cancel" />
+
+        <Button
+            android:id="@+id/add_agenda_save_btn"
+            style="@style/Button.Transparent.Red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/action_save" />
+
+    </LinearLayout>
+</LinearLayout>

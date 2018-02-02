@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridView
+    android:id="@+id/calendar_gridview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    android:background="@color/bg_card"
+    android:gravity="center"
+    android:numColumns="7"
+    android:stretchMode="columnWidth"
+    android:verticalSpacing="1dp"/>

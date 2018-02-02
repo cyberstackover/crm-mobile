@@ -1,0 +1,186 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    tools:context="com.sinergiinformatika.sisicrm.fragments.StatisticsFragment">
+
+    <LinearLayout
+        android:id="@+id/statistics_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_card"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/content_vertical_margin"
+        android:paddingTop="@dimen/content_vertical_margin">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/TextPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+            android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+            android:gravity="end"
+            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+            android:text="@string/text_survey_statistics" />
+
+        <TextView
+            android:id="@+id/statistics_month_label"
+            style="@style/TextPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+            android:text="@string/hello_world" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/statistics_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/statistics_header_visit"
+                layout="@layout/row_item_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_card"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/gauge_width"
+                    android:layout_height="@dimen/gauge_height">
+
+                    <com.sinergiinformatika.sisicrm.views.GaugeView
+                        android:id="@+id/statistics_gauge_visit"
+                        android:layout_width="@dimen/gauge_width"
+                        android:layout_height="@dimen/gauge_height" />
+
+                    <TextView
+                        android:id="@+id/statistics_amount_visit"
+                        style="@style/TextPrimary.Large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/hello_world" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/statistics_note_visit"
+                    style="@style/TextPrimary.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:gravity="center"
+                    android:text="@string/hello_world" />
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/statistics_header_order"
+                layout="@layout/row_item_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_card"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/gauge_width"
+                    android:layout_height="@dimen/gauge_height">
+
+                    <com.sinergiinformatika.sisicrm.views.GaugeView
+                        android:id="@+id/statistics_gauge_order"
+                        android:layout_width="@dimen/gauge_width"
+                        android:layout_height="@dimen/gauge_height" />
+
+                    <TextView
+                        android:id="@+id/statistics_amount_order"
+                        style="@style/TextPrimary.Large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/hello_world" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/statistics_note_order"
+                    style="@style/TextPrimary.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:gravity="center"
+                    android:text="@string/hello_world" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/statistics_blank_text"
+        style="@style/TextPrimary.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/message_no_data"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/statistics_loading_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/statistics_header">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/bg_main" />
+
+        <include
+            layout="@layout/loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

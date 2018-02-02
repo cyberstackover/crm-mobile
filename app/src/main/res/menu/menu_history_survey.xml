@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/action_detail_store"
+            android:title="@string/title_activity_store_detail"/>
+        <item
+            android:id="@+id/action_detail_survey"
+            android:title="@string/title_activity_survey_detail"/>
+    </group>
+</menu>

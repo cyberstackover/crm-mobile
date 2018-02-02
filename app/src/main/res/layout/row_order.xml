@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/row_order_name_edit"
+                style="@style/TextPrimary.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_horizontal_margin_smaller"
+                android:layout_marginRight="@dimen/content_horizontal_margin_smaller"
+                android:hint="@string/hint_item_name">
+
+                <requestFocus />
+            </Spinner>
+
+            <LinearLayout
+                android:id="@+id/row_order_label_holder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!--android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                -->
+                <TextView
+                    android:id="@+id/row_order_name"
+                    style="@style/TextPrimary.Bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/content_horizontal_margin_smaller"
+                    android:layout_marginRight="@dimen/content_horizontal_margin_smaller"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                    android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                    android:text="@string/hello_world"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/row_order_amount_edit"
+                    style="@style/TextPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/content_horizontal_margin"
+                    android:layout_marginRight="@dimen/content_horizontal_margin"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_amount"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/TextPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/label_unit_sak" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/row_order_add_btn"
+            style="@style/Button.Transparent.Gray.Icon"
+            android:layout_gravity="center_vertical"
+            android:onClick="toggleOrder"
+            android:tag="@string/tag_add"
+            android:text="@string/icon_add" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/row_order_product_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:src="@color/stroke_card" />
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username" translatable="false">&#xf007; Username</string>
+    <string name="prompt_password" translatable="false">&#xf023; Password</string>
+    <string name="action_sign_in" translatable="false">Login or register</string>
+    <string name="action_sign_in_short" translatable="false">LOGIN</string>
+
+    <string name="error_invalid_email">Email tidak valid</string>
+    <string name="error_invalid_password">Password tidak valid</string>
+    <string name="error_incorrect_username">Username salah</string>
+    <string name="error_incorrect_password_confirm">Konfirmasi password baru tidak sesuai</string>
+</resources>

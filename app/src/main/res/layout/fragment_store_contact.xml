@@ -1,0 +1,146 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.sinergiinformatika.sisicrm.fragments.StoreContactFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_main"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_main"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="@dimen/content_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/content_vertical_margin"
+                android:text="@string/label_store_contact"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_card"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/store_edit_owner_name"
+                    style="@style/TextPrimary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/label_owner_name"
+                    android:inputType="textCapWords"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:singleLine="true"/>
+
+                <TextView
+                    style="@style/TextRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_asterisk"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/store_edit_phone_number"
+                    style="@style/TextPrimary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/label_phone_number"
+                    android:inputType="phone"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:singleLine="true"/>
+
+                <TextView
+                    style="@style/TextRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_asterisk"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/store_edit_hp"
+                style="@style/TextPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_phone_mobile"
+                android:inputType="phone"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:singleLine="true"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/store_edit_birth_date"
+                    style="@style/TextPrimary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:editable="false"
+                    android:hint="@string/label_birth_date"
+                    android:paddingTop="@dimen/activity_vertical_margin"/>
+
+
+                <Button
+                    android:id="@+id/button3"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:onClick="invokeDatePicker"
+                    android:text="@string/icon_calendar"
+                    android:textSize="24sp"/>
+
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/store_edit_owner_religion"
+                style="@style/TextPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_vertical_margin_smaller"
+                android:prompt="@string/label_religion"/>
+
+            <EditText
+                android:id="@+id/store_edit_descrtiption"
+                style="@style/TextPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_description"
+                android:paddingTop="@dimen/activity_vertical_margin"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,196 @@
+<RelativeLayout
+    android:id="@+id/root_view_holder"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    tools:context="com.sinergiinformatika.sisicrm.fragments.StoreListFragment">
+
+    <RelativeLayout
+        android:id="@+id/store_list_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/store_list_filter_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_card"
+            android:orientation="vertical">
+
+            <SearchView
+                android:id="@+id/store_list_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:paddingBottom="@dimen/content_vertical_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:queryHint="@string/hint_search_store"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/header_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/store_list_filter_holder"
+            android:src="@color/stroke_list_header"/>
+
+        <TabHost
+            android:id="@+id/tabHost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header_line">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:id="@+id/store_list_tab_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bg_tab"/>
+
+                </HorizontalScrollView>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/store_list_p_refresh"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ListView
+                            android:id="@+id/listview_priority"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/store_list_d_refresh"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ListView
+                            android:id="@+id/listview_distance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/store_list_l_refresh"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ListView
+                            android:id="@+id/listview_lastcheckin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/newstore_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v4.widget.SwipeRefreshLayout
+                            android:id="@+id/store_list_n_refresh"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ListView
+                                android:id="@+id/listview_newstore"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </android.support.v4.widget.SwipeRefreshLayout>
+
+                        <TextView
+                            android:id="@+id/new_store_list_blank_text"
+                            style="@style/TextPrimary.Large"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/content_vertical_margin"
+                            android:paddingLeft="@dimen/content_horizontal_margin"
+                            android:paddingRight="@dimen/content_horizontal_margin"
+                            android:paddingTop="@dimen/content_vertical_margin"
+                            android:text="@string/message_blank_new_store_list"
+                            android:visibility="gone"/>
+
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/store_list_blank_text"
+        style="@style/TextPrimary.Large"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/content_vertical_margin"
+        android:paddingLeft="@dimen/content_horizontal_margin"
+        android:paddingRight="@dimen/content_horizontal_margin"
+        android:paddingTop="@dimen/content_vertical_margin"
+        android:text="@string/message_blank_store_list"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/loading_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/content_horizontal_margin"
+            android:layout_marginRight="@dimen/content_horizontal_margin"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/TextPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/label_loading"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/store_list_add_btn"
+        style="@style/Button.Red.Circle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:onClick="addStore"
+        android:text="@string/icon_add"/>
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sinergiinformatika.sisicrm.MapActivity"
+    tools:ignore="MergeRootFrame">
+
+    <FrameLayout
+        android:id="@+id/container_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_holder"
+        android:layout_alignParentTop="true"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/button_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:background="@color/bg_card"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/Button.Transparent.Red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="false"
+            android:onClick="invokeLocationMap"
+            android:text="@string/action_select_location" />
+    </LinearLayout>
+
+</RelativeLayout>

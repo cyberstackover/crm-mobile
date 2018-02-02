@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+              android:paddingTop="@dimen/content_vertical_margin_smaller_even">
+
+    <TextView
+        android:id="@+id/row_item_id"
+        style="@style/TextPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/row_item_text"
+        style="@style/TextPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+        android:tag="row_complain_text"
+        android:text="@string/label_broken_package"/>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <ToggleButton
+        android:id="@+id/row_item_check"
+        style="@style/ToggleButtonEmpty"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:background="@drawable/background_toggle_button"/>
+
+    <EditText
+        android:id="@+id/row_item_unit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/content_horizontal_margin_smaller"
+        android:layout_marginStart="@dimen/content_horizontal_margin_smaller"
+        android:inputType="number"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'newrelic'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+
+    defaultConfig {
+        applicationId "com.sinergiinformatika.sisicrm"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1000002
+        versionName "1.0.2"
+        // version code and version name format
+        // code: x yy zzz b
+        // name: x.y.z
+        // x - major version release including API changes which don't support backward
+        //     compatibility, business logic changes, major UI changes (layout, redesign), etc.
+        // y - minor version release including minor UI changes
+        //     (addition/subtraction of fields in forms, a few layout changes, etc.),
+        //     API changes which support backward-compatibility, etc.
+        // z - micro version release including bug-fix, minor UI adjustments
+        //     (change of color, button, etc.)
+        // b - build code, be careful in releasing development versions for there are only
+        //     10 chances
+        // ex:
+        // - code: 60050
+        //   name: 0.6.5
+        // - code: 1000021
+        //   name: 1.0.2
+        // - code: 1040120
+        //   name: 1.4.12
+        // - code: 13100124
+        //   name: 13.10.12
+
+//        resValue "string", "tray__authority", "${applicationId}.tray"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+//    compile 'com.android.support:support-v13:21.0.3'
+    compile('com.google.android.gms:play-services:6.1.71') {
+        exclude module: 'support-v4'
+    }
+    compile('com.sothree.slidinguppanel:library:3.0.0') {
+        exclude module: 'support-v4'
+    }
+    compile('org.apache.httpcomponents:httpmime:4.3.6') {
+        exclude module: 'httpclient'
+    }
+    compile 'com.google.guava:guava-collections:r03'
+    compile 'com.roomorama:caldroid:2.2.1'
+    compile 'com.newrelic.agent.android:android-agent:5.+'
+    compile 'org.apache.httpcomponents:httpclient-android:4.3.5'
+    compile 'net.grandcentrix.tray:tray:0.9.2'
+    compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.google.code.findbugs:jsr305:2.0.2'
+}

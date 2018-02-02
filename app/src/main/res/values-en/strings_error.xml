@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_connection">Error while contacting server</string>
+    <string name="error_invalid_response">Invalid response</string>
+    <string name="error_hash_failed">Password hash failed</string>
+    <string name="error_invalid_date">Invalid date</string>
+    <string name="error_invalid_store">Invalid store</string>
+    <string name="error_save_failed">Save failed</string>
+    <string name="error_data_not_found">Data not found</string>
+    <string name="error_distance_from_store">Too far from designated store</string>
+    <string name="error_no_connection">No Connection</string>
+    <string name="error_not_implemented">Unimplemented</string>
+    <string name="error_min_one">At least one entry is needed</string>
+    <string name="error_invalid_location">Invalid location</string>
+    <string name="error_distributor_list">Couldn\'t get distributor list</string>
+    <string name="error_no_product_found">No product data</string>
+    <string name="error_no_coordinate">No coordinate,\ncannot show map</string>
+    <string name="error_no_store_image">No store image</string>
+    <string name="error_can_not_get_location">Couldn\'t get location</string>
+    <string name="error_empty_store_image">Store image cannot be empty</string>
+    <string name="error_field_must_greater_than">%1$s is must greater than %2$s</string>
+    <string name="error_fetching_statistics">Couldn\'t fetch statistics data</string>
+    <string name="error_field_must_greater_than_or_equal_to">%1$s is must greater or equal than %2$s</string>
+    <string name="error_field_length_must_equal_to">%1$s must be %2$s characters</string>
+    <string name="error_cannot_get_image">Couldn\'t get image</string>
+    <string name="error_can_not_load_image">Couldn\'t load image</string>
+    <string name="error_out_of_memory">Out of memory</string>
+    <string name="error_invalid_login">Invalid login</string>
+    <string name="error_download_province">Download province failed</string>
+    <string name="error_download_city">Download city failed</string>
+    <string name="error_download_subdistrict">Download subdistrict failed</string>
+    <string name="error_download_store">Download store failed</string>
+    <string name="error_download_distributor">Download distributor failed</string>
+    <string name="error_download_product">Download product failed</string>
+    <string name="error_download_complain">Download complain failed</string>
+    <string name="error_no_area_assignment">No area assigment</string>
+    <string name="error_store_location_update">Couldn\'t update store location</string>
+    <string name="error_session_expired">Session expired</string>
+    <string name="error_unauthorized">Unauthorized access</string>
+    <string name="error_old_password_no_match">Old password doesn\'t match with current password</string>
+    <string name="error_change_password_failed">Change password failed</string>
+
+</resources>

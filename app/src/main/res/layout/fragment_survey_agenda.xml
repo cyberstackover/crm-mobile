@@ -1,0 +1,117 @@
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:gravity="bottom"
+    sothree:umanoPanelHeight="@dimen/slide_panel_default_height"
+    tools:context="com.sinergiinformatika.sisicrm.fragments.SurveyAgendaFragment">
+
+    <FrameLayout
+        android:id="@+id/agenda_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_card"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/slide_panel_height">
+
+        <LinearLayout
+            android:id="@+id/survey_list_filter_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/stroke_list_header"/>
+
+            <TextView
+                android:id="@+id/survey_list_date_label"
+                style="@style/Button.Transparent.Gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/content_vertical_margin_smaller_even"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/content_vertical_margin_smaller_even"
+                android:gravity="start|center_vertical"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/hello_world"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/stroke_list_header"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/survey_agenda_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/survey_list_filter_holder"
+            android:layoutAnimation="@anim/list_animation"
+            android:listSelector="@drawable/background_card"/>
+
+        <LinearLayout
+            android:id="@+id/survey_agenda_blank_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/survey_list_filter_holder"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/survey_agenda_blank_text"
+                style="@style/TextPrimary.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/content_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/message_blank_agenda"/>
+
+            <TextView
+                android:id="@+id/survey_agenda_blank_notes"
+                style="@style/TextPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/content_vertical_margin"
+                android:gravity="center"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/message_blank_agenda_action"/>
+
+            <Button
+                android:id="@+id/survey_agenda_blank_button"
+                style="@style/Button.Red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="goToStoreList"
+                android:paddingLeft="@dimen/content_horizontal_margin"
+                android:paddingRight="@dimen/content_horizontal_margin"
+                android:text="@string/action_to_store_list"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

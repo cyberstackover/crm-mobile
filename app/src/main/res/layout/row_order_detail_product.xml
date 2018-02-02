@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/content_vertical_margin_smaller"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/content_vertical_margin_smaller">
+
+    <TextView
+        android:id="@+id/row_product_name"
+        style="@style/TextPrimary.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+        android:text="@string/hello_world"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/row_product_quantity"
+            style="@style/TextPrimary.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+            android:text="@string/hello_world"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/row_product_unit"
+            style="@style/TextPrimary.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+            android:text="@string/hello_world"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+</RelativeLayout>

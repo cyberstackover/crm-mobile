@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    tools:context="com.sinergiinformatika.sisicrm.fragments.HistoryFragment">
+
+    <LinearLayout
+        android:id="@+id/survey_history_filter_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/content_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <SearchView
+            android:id="@+id/row_history_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryHint="@string/hint_search_store" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/history_header_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/survey_history_filter_holder"
+        android:src="@color/stroke_list_header" />
+
+    <TabHost
+        android:id="@+id/tabHost2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/history_header_line"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_card" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+                <FrameLayout
+                    android:id="@+id/tab_survey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/tab_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></FrameLayout>
+
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</RelativeLayout>

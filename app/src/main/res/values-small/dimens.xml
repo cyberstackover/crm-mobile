@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="date_cell_padding">8dp</dimen>
+    <dimen name="slide_panel_default_height">150dp</dimen>
+    <dimen name="slide_panel_height">300dp</dimen>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_card"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/row_history_data_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/row_list_header"
+        layout="@layout/row_item_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/content_vertical_margin_smaller"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/content_vertical_margin_smaller">
+
+        <TextView
+            android:id="@+id/row_history_store_name"
+            style="@style/TextPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/content_horizontal_margin"
+            android:layout_marginRight="@dimen/content_horizontal_margin"
+            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+            android:text="@string/hello_world"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/row_history_list_icon"
+                style="@style/TextSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_horizontal_margin_smaller"
+                android:layout_marginRight="@dimen/content_horizontal_margin_smaller"
+                android:text="@string/icon_list" />
+
+            <TextView
+                android:id="@+id/row_history_image_icon"
+                style="@style/TextSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_horizontal_margin_smaller"
+                android:layout_marginRight="@dimen/content_horizontal_margin_smaller"
+                android:text="@string/icon_camera" />
+
+            <TextView
+                android:id="@+id/row_history_comment_icon"
+                style="@style/TextSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_horizontal_margin_smaller"
+                android:layout_marginRight="@dimen/content_horizontal_margin_smaller"
+                android:text="@string/icon_comment" />
+
+            <TextView
+                android:id="@+id/row_history_competitor_icon"
+                style="@style/TextSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_horizontal_margin_smaller"
+                android:layout_marginRight="@dimen/content_horizontal_margin_smaller"
+                android:text="@string/icon_user_secret"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/row_history_date"
+                style="@style/TextSecondary.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_horizontal_margin"
+                android:layout_marginRight="@dimen/content_horizontal_margin"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/hello_world" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/row_history_sync_status"
+            style="@style/TextSecondary.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/content_horizontal_margin_smaller"
+            android:layout_marginRight="@dimen/content_horizontal_margin_smaller"
+            android:text="@string/icon_upload" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@color/stroke_card" />
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    tools:context="com.sinergiinformatika.sisicrm.fragments.OrderFragment">
+
+    <TextView
+        android:id="@+id/order_store_name"
+        style="@style/TextPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/icon_button_radius"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/content_vertical_margin_smaller"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/content_vertical_margin_smaller"
+        android:text="@string/title_fragment_order" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/order_button_holder"
+        android:layout_below="@+id/order_store_name"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_card"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/content_vertical_margin_smaller">
+
+            <Spinner
+                android:id="@+id/order_distributor_spinner"
+                style="@style/TextPrimary.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/TextPrimary.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_vertical_margin"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/label_delivery_date" />
+
+            <TextView
+                android:id="@+id/order_date"
+                style="@style/TextPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingLeft="@dimen/content_horizontal_margin"
+                android:paddingRight="@dimen/content_horizontal_margin"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/icon_calendar" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/content_vertical_margin"
+                android:layout_marginLeft="@dimen/content_horizontal_margin_smaller_even"
+                android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                android:src="@drawable/horizontal_line" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/order_item_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_card"
+                android:orientation="vertical">
+
+                <include layout="@layout/row_order" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/order_button_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_card"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/Button.Transparent.Gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="finish"
+            android:text="@string/action_cancel" />
+
+        <Button
+            android:id="@+id/order_save_button"
+            style="@style/Button.Transparent.Red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="order"
+            android:text="@string/action_order" />
+
+    </LinearLayout>
+</RelativeLayout>

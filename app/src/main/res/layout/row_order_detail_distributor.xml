@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/RowProductDetail"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@color/stroke_list_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/row_item_label"
+            style="@style/TextSecondary.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_vertical_margin_smaller"
+            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+            android:text="@string/label_distributor_name"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/row_item_value"
+            style="@style/TextPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/content_vertical_margin_smaller"
+            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+            android:text="@string/hello_world"/>
+
+        <TextView
+            android:id="@+id/row_date_label"
+            style="@style/TextSecondary.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_vertical_margin_smaller"
+            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+            android:text="@string/label_delivery_date"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/row_date_value"
+            style="@style/TextPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/content_vertical_margin_smaller"
+            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+            android:text="@string/hello_world"/>
+
+        <LinearLayout
+            android:id="@+id/row_item_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@color/stroke_list_header"/>
+
+</LinearLayout>

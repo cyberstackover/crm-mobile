@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/background_card"
+              android:descendantFocusability="blocksDescendants"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/row_list_header"
+        layout="@layout/row_item_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/content_vertical_margin_smaller"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/content_vertical_margin_smaller">
+
+        <LinearLayout
+            android:id="@+id/row_store_right_column"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/row_store_left_column"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/row_store_date"
+                style="@style/TextSecondary.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/hello_world"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/row_store_distance"
+                style="@style/TextSecondary.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/hello_world"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/row_store_status"
+                    style="@style/TextSecondary.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                    android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                    android:text="@string/icon_circle_o"/>
+
+                <TextView
+                    android:id="@+id/row_store_data_status"
+                    style="@style/TextSecondary.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/icon_warning"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_store_name_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@id/row_store_right_column"
+            android:layout_toStartOf="@id/row_store_right_column"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/row_store_priority_img"
+                style="@style/TextSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_horizontal_margin_smaller"
+                android:layout_marginRight="@dimen/content_horizontal_margin_smaller"
+                android:text="@string/icon_bookmark"
+                android:textColor="@color/gold"/>
+
+            <TextView
+                android:id="@+id/row_store_name"
+                style="@style/TextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/hello_world"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_store_left_column"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/row_store_name_container"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/row_store_address"
+                style="@style/TextSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                android:text="@string/hello_world"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/row_store_city"
+                    style="@style/TextSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/content_horizontal_margin_smaller"
+                    android:layout_marginRight="@dimen/content_horizontal_margin_smaller"
+                    android:ellipsize="marquee"
+                    android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                    android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                    android:text="@string/hello_world"/>
+
+                <TextView
+                    android:id="@+id/row_store_cp"
+                    style="@style/TextSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                    android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                    android:text="@string/hello_world"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/row_store_agenda_btn"
+                    style="@style/Button.Inline.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/content_horizontal_margin_smaller"
+                    android:layout_marginRight="@dimen/content_horizontal_margin_smaller"
+                    android:onClick="addAgenda"
+                    android:paddingLeft="@dimen/content_horizontal_margin_smaller"
+                    android:paddingRight="@dimen/content_horizontal_margin_smaller"
+                    android:text="@string/label_add_agenda"/>
+
+                <Button
+                    android:id="@+id/row_store_order_btn"
+                    style="@style/Button.Inline.Grey"
+                    android:layout_width="wrap_content"
+                    android:onClick="addOrder"
+                    android:paddingLeft="@dimen/content_horizontal_margin_smaller"
+                    android:paddingRight="@dimen/content_horizontal_margin_smaller"
+                    android:text="@string/label_add_order"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_vertical_margin_smaller"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/row_store_reupload_btn"
+                    style="@style/Button.Inline.Orange"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/content_horizontal_margin"
+                    android:layout_marginRight="@dimen/content_horizontal_margin"
+                    android:onClick="reUploadStore"
+                    android:paddingLeft="@dimen/content_horizontal_margin_smaller"
+                    android:paddingRight="@dimen/content_horizontal_margin_smaller"
+                    android:text="@string/label_reupload"
+                    android:visibility="visible"/>
+
+                <ProgressBar
+                    android:id="@+id/row_store_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/progressbar_in_row_width"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:indeterminateOnly="true"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@color/stroke_card"/>
+
+</LinearLayout>

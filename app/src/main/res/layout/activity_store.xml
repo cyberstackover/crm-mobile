@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main"
+    android:orientation="vertical"
+    tools:context="com.sinergiinformatika.sisicrm.StoreActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_holder"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_card"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/container_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/bg_card" />
+
+            <FrameLayout
+                android:id="@+id/container_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Space
+                android:id="@+id/space_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/bg_card"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/button_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:background="@color/bg_card"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/button_holder_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_card"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/Button.Transparent.Gray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="cancel"
+                android:text="@string/action_cancel" />
+
+            <Button
+                style="@style/Button.Transparent.Red"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:nestedScrollingEnabled="false"
+                android:onClick="next"
+                android:text="@string/action_next" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_holder_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_card"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                style="@style/Button.Transparent.Gray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="back"
+                android:text="@string/action_prev" />
+
+            <Button
+                style="@style/Button.Transparent.Red"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:nestedScrollingEnabled="false"
+                android:onClick="save"
+                android:text="@string/action_save" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

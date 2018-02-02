@@ -1,0 +1,529 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sinergiinformatika.sisicrm.StoreDetailActivity">
+
+    <ScrollView
+        android:id="@+id/store_detail_scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/store_detail_image_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/store_detail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_height"
+                    android:layout_alignParentTop="true"
+                    android:onClick="showFullImage"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/store_default" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/store_detail_image"
+                    android:background="@color/black_alpha"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/store_detail_name"
+                        style="@style/TextLight.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/hello_world" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginLeft="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginStart="@dimen/content_horizontal_margin_smaller_even"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/store_detail_status_icon"
+                            style="@style/TextSecondary.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                            android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                            android:text="@string/icon_bookmark" />
+
+                        <TextView
+                            android:id="@+id/store_detail_status"
+                            style="@style/TextLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                            android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                            android:text="@string/hello_world" />
+
+                        <TextView
+                            style="@style/TextLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                            android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                            android:text="@string/text_divider" />
+
+                        <TextView
+                            android:id="@+id/store_detail_type_icon"
+                            style="@style/TextSecondary.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                            android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                            android:text="@string/icon_bookmark" />
+
+                        <TextView
+                            android:id="@+id/store_detail_type"
+                            style="@style/TextLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                            android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                            android:text="@string/hello_world" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                            android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                            android:text="@string/label_nfc_id" />
+
+                        <TextView
+                            style="@style/TextLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/content_horizontal_margin"
+                            android:layout_marginRight="@dimen/content_horizontal_margin"
+                            android:text="@string/colon" />
+
+                        <TextView
+                            android:id="@+id/store_detail_nfc_id"
+                            style="@style/TextLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                            android:text="@string/hello_world" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginLeft="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginStart="@dimen/content_horizontal_margin_smaller_even"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                            android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                            android:text="@string/label_warehouse_capacity" />
+
+                        <TextView
+                            style="@style/TextLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/content_horizontal_margin"
+                            android:layout_marginRight="@dimen/content_horizontal_margin"
+                            android:text="@string/colon" />
+
+                        <TextView
+                            android:id="@+id/store_detail_capacity"
+                            style="@style/TextLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/content_horizontal_margin_smaller"
+                            android:layout_marginRight="@dimen/content_horizontal_margin_smaller"
+                            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                            android:text="@string/hello_world" />
+
+                        <TextView
+                            style="@style/TextLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                            android:text="@string/label_unit_ton" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/store_detail_location_label"
+                layout="@layout/row_item_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_card"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/content_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/content_vertical_margin_smaller_even"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/label_address" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin"
+                        android:layout_marginRight="@dimen/content_horizontal_margin"
+                        android:text="@string/colon" />
+
+                    <TextView
+                        android:id="@+id/store_detail_store_address"
+                        style="@style/TextPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:singleLine="false"
+                        android:text="@string/hello_world" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/map_height"
+                    android:background="@color/bg_main">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextSecondary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                            android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                            android:text="@string/error_no_coordinate" />
+
+                        <Button
+                            android:id="@+id/store_detail_loc_btn"
+                            style="@style/Button.Red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/content_vertical_margin_smaller"
+                            android:onClick="showLocationPicker"
+                            android:paddingLeft="@dimen/content_horizontal_margin"
+                            android:paddingRight="@dimen/content_horizontal_margin"
+                            android:text="@string/label_add_location" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/store_detail_map_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <fragment
+                            android:id="@+id/store_detail_map"
+                            class="com.sinergiinformatika.sisicrm.fragments.WorkaroundMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <include
+                android:id="@+id/store_detail_contact_label"
+                layout="@layout/row_item_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_card"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/content_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/content_vertical_margin_smaller_even">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextPrimary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_weight="0.7"
+                        android:gravity="end"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/label_owner_name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin"
+                        android:layout_marginRight="@dimen/content_horizontal_margin"
+                        android:text="@string/colon" />
+
+                    <TextView
+                        android:id="@+id/store_detail_owner_name"
+                        style="@style/TextPrimary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/hello_world" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextPrimary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_weight="0.7"
+                        android:gravity="end"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/label_phone_mobile" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin"
+                        android:layout_marginRight="@dimen/content_horizontal_margin"
+                        android:text="@string/colon" />
+
+                    <TextView
+                        android:id="@+id/store_detail_owner_mobile"
+                        style="@style/TextPrimary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/hello_world" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextPrimary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_weight="0.7"
+                        android:gravity="end"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/label_phone_number" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin"
+                        android:layout_marginRight="@dimen/content_horizontal_margin"
+                        android:text="@string/colon" />
+
+                    <TextView
+                        android:id="@+id/store_detail_phone"
+                        style="@style/TextPrimary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/hello_world" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextPrimary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_weight="0.7"
+                        android:gravity="end"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/label_birth_date" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin"
+                        android:layout_marginRight="@dimen/content_horizontal_margin"
+                        android:text="@string/colon" />
+
+                    <TextView
+                        android:id="@+id/store_detail_owner_birth"
+                        style="@style/TextPrimary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/hello_world" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextPrimary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_weight="0.7"
+                        android:gravity="end"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/label_religion" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin"
+                        android:layout_marginRight="@dimen/content_horizontal_margin"
+                        android:text="@string/colon" />
+
+                    <TextView
+                        android:id="@+id/store_detail_owner_religion"
+                        style="@style/TextPrimary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/hello_world" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextPrimary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_marginRight="@dimen/content_horizontal_margin_smaller_even"
+                        android:layout_weight="0.7"
+                        android:gravity="end"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/label_description" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_horizontal_margin"
+                        android:layout_marginRight="@dimen/content_horizontal_margin"
+                        android:text="@string/colon" />
+
+                    <TextView
+                        android:id="@+id/store_detail_notes"
+                        style="@style/TextPrimary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/content_vertical_margin_smaller_even"
+                        android:paddingTop="@dimen/content_vertical_margin_smaller_even"
+                        android:text="@string/hello_world" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
